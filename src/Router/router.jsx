@@ -5,6 +5,8 @@ import Root from "../Root/Root";
 import About from "../component/About/About";
 import Services from "../component/Service/Services";
 import ServiceDetails from "../component/Service/ServiceDetails";
+import Booked from "../component/Booked/Booked";
+import Contact from "../component/Contact/Contact";
 
 const router = createBrowserRouter([
 	{
@@ -29,7 +31,16 @@ const router = createBrowserRouter([
 			{
 				path: "/services/:id",
 				element: <ServiceDetails />,
-				loader: () => fetch("./data.json"),
+				loader: () => fetch("../data.json"),
+			},
+			{
+				path: "/contact",
+				element: <Contact />,
+			},
+			{
+				path: "/booked",
+				element: <Booked />,
+				loader: () => fetch("../data.json"),
 			},
 		],
 	},
