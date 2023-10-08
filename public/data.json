@@ -1,0 +1,126 @@
+[
+    {
+        "id": 1,
+        "title": "Corporate Conference",
+        "thumbnail_img": "https://i.ibb.co/k3jsVTV/conference-thumbnail.jpg",
+        "full_image": "https://i.ibb.co/18GVT8r/conference-full.jpg",
+        "price": 1000.00,
+        "details": {
+            "date": "2023-11-15",
+            "location": "New York City",
+            "duration": "2 days"
+        },
+        "short_description": "Join us for an informative and engaging corporate conference in the heart of New York City.",
+        "description": "Welcome to our Annual Corporate Conference, a premier event that brings together industry leaders, innovators, and visionaries for two days of inspiration, knowledge sharing, and networking. At our conference, we believe in the power of collaboration and the exchange of ideas to drive business growth and success.",
+        "features": [
+            "World-Class Speakers: Our conference boasts an impressive lineup of keynote speakers, thought leaders, and experts who will provide valuable insights and strategies to help you navigate the ever-evolving corporate landscape.",
+            "Interactive Workshops: Dive deep into the latest industry trends and practical solutions through interactive workshops and hands-on sessions led by industry experts. Gain actionable takeaways to implement in your organization.",
+            "Networking Opportunities: Connect with fellow attendees, share experiences, and establish meaningful professional relationships during dedicated networking sessions, coffee breaks, and evening receptions.",
+            "Exhibition Area: Explore a diverse range of products and services from exhibitors showcasing cutting-edge technologies, solutions, and innovations that can transform your business.",
+            "Panel Discussions: Engage in thought-provoking panel discussions on topics ranging from sustainability and digital transformation to leadership and diversity, offering diverse perspectives and insights.",
+            "Innovative Technology Showcase: Experience firsthand the latest technologies shaping the corporate world in our tech showcase area, featuring live demonstrations and interactive displays."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Product Launch Party",
+        "thumbnail_img": "https://i.ibb.co/f20d6FL/product-launch-thumbnail.jpg",
+        "full_image": "https://i.ibb.co/wYTVVd0/product-launch-full.png",
+        "price": 500.00,
+        "details": {
+            "date": "2023-12-10",
+            "location": "San Francisco",
+            "duration": "1 day"
+        },
+        "short_description": "Be part of the excitement as we launch our latest product with a grand party.",
+        "description": "Join us for an evening of excitement and innovation at our exclusive Product Launch Party! At [Your Company Name], we've been working tirelessly to develop a groundbreaking product that will revolutionize the industry. Now, it's time to unveil this technological marvel to the world, and we want you to be part of this historic moment.       Our Product Launch Party is not just an event; it's a celebration of innovation, collaboration, and progress. Held in the heart of [City], this gala event promises an unforgettable experience filled with entertainment, networking, and, of course, a firsthand look at our game-changing product.As you step into our meticulously designed venue, you'll be greeted by an ambiance that reflects the essence of innovation. The evening begins with a welcome reception where you can mingle with industry leaders, influencers, and fellow innovators. It's the perfect opportunity to forge valuable connections and share ideas.The highlight of the evening is, of course, the grand product reveal. Witness the moment when the curtains are drawn, and our revolutionary creation takes center stage. Be among the first to experience its features, capabilities, and the endless possibilities it offers.",
+        "features": [
+            "Live Demonstrations: Get a hands-on experience with the product through live demonstrations and interactive exhibits. Our experts will be on hand to answer your questions and showcase its potential.",
+            "Exclusive Swag: Attendees will receive exclusive event swag, including branded merchandise and keepsakes to commemorate this special occasion.",
+            "Culinary Delights: Indulge in a gourmet dining experience featuring a diverse menu of culinary delights, including appetizers, entrees, and delectable desserts.",
+            "Networking Opportunities: Connect with like-minded professionals, potential partners, and industry influencers during our networking sessions."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Annual Shareholders Meeting",
+        "thumbnail_img": "https://i.ibb.co/sFgCS31/shareholders-meeting-thumbnail.jpg",
+        "full_image": "https://i.ibb.co/yPDGd50/shareholders-meeting-full.jpg",
+        "price": 750.00,
+        "details": {
+            "date": "2024-02-20",
+            "location": "Chicago",
+            "duration": "1 day"
+        },
+        "short_description": "Our annual meeting is an opportunity to connect with our shareholders and discuss our progress.",
+        "description": "Our Annual Shareholders Meeting is the cornerstone of transparency, collaboration, and growth at  ST. Limited. Each year, we come together with our valued shareholders to reflect on our journey, share insights into our accomplishments, and outline our vision for the future. This exclusive event serves as a testament to our commitment to open communication, financial stewardship, and the power of collective decision-making.",
+        "features": [
+            "Financial Review: Gain a comprehensive understanding of our financial performance over the past year. We present detailed reports on revenue, profit margins, and key financial indicators, allowing shareholders to assess the company's fiscal health.",
+            "Strategic Vision: Dive into our strategic plans for the coming year and beyond. We discuss market trends, emerging opportunities, and the initiatives that will drive our growth and sustainability.",
+            "Q&A Session: Interact directly with our executive team, including the CEO, CFO, and other key leaders. Shareholders have the opportunity to ask questions, seek clarifications, and provide valuable input.",
+            "Voting and Resolutions: Participate in crucial voting sessions where shareholders can cast their votes on important matters, such as board elections, executive compensation, and proposed resolutions.",
+            "Corporate Governance: Learn about our commitment to corporate governance best practices, ethics, and responsible business conduct. Understand how we ensure integrity and transparency in our operations."
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Seminar on Business Strategy",
+        "thumbnail_img": "https://i.ibb.co/QD58Lnd/seminar-thumbnail.jpg",
+        "full_image": "https://i.ibb.co/P6vMtGG/seminar-full.jpg",
+        "price": 300.00,
+        "details": {
+            "date": "2024-03-15",
+            "location": "Los Angeles",
+            "duration": "1 day"
+        },
+        "short_description": "Join industry experts for a deep dive into effective business strategies.",
+        "description": "Welcome to our highly anticipated Seminar on Business Strategy – a premier event designed to empower business leaders, entrepreneurs, and professionals with the knowledge and insights needed to thrive in today's dynamic business landscape. Join us for a day of inspiration, learning, and networking as we delve deep into the art and science of strategic business planning.",
+        "features": [
+            "Expert Speakers: Engage with renowned industry experts, thought leaders, and successful entrepreneurs who will share their valuable experiences and expertise in crafting effective business strategies.",
+            "Comprehensive Workshops: Participate in interactive workshops that cover a wide range of strategic topics, including market analysis, competitive intelligence, risk management, and more. Gain practical skills to apply to your business.",
+            "Strategic Planning Frameworks: Learn about proven strategic planning frameworks and methodologies used by successful companies worldwide. Understand how to develop and execute strategies that drive growth and innovation.",
+            "Case Studies: Dive into real-world case studies of businesses that have successfully navigated challenges and achieved remarkable results through strategic decision-making."
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Team Building Retreat",
+        "thumbnail_img": "https://i.ibb.co/0FDGddg/retreat-thumbnail.jpg",
+        "full_image": "https://i.ibb.co/FgyJsqr/retreat-full.jpg",
+        "price": 1200.00,
+        "details": {
+            "date": "2024-05-10",
+            "location": "Miami",
+            "duration": "3 days"
+        },
+        "short_description": "Strengthen your team's bonds and productivity with a fun-filled retreat by the beach.",
+        "description": "Our Team Building Retreat offers a serene escape from the daily corporate grind, providing a conducive environment for team members to relax, learn, and grow together. Nestled in the picturesque surroundings of [Retreat Location], this retreat is a blend of fun, adventure, and personal development.",
+        "features": [
+            "Stunning Natural Setting: Our retreat location is carefully chosen to provide a peaceful backdrop for team activities. Surrounded by nature, it's the perfect place to unwind and reconnect with colleagues.",
+            "Customized Programs: We believe that each team is unique, so we tailor our programs to meet your specific needs. Whether you're focusing on trust-building, leadership development, or enhancing communication, we've got you covered.",
+            "Adventure and Challenges: Engage your team in thrilling outdoor activities like hiking, kayaking, or ropes courses. These challenges encourage collaboration and problem-solving while providing an adrenaline rush.",
+            "Professional Facilitators: Our experienced facilitators are skilled in team dynamics and leadership. They lead your team through activities and discussions, ensuring maximum learning and growth."
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Industry Awards Gala",
+        "thumbnail_img": "https://i.ibb.co/7VnVLSM/awards-gala-thumbnail.jpg",
+        "full_image": "https://i.ibb.co/WvcBk8C/awards-gala-full.jpg",
+        "price": 1500.00,
+        "details": {
+            "date": "2024-07-30",
+            "location": "Las Vegas",
+            "duration": "1 day"
+        },
+        "short_description": "Celebrate excellence in the industry with a glamorous awards gala in Las Vegas.",
+        "description": "The Industry Awards Gala is the pinnacle of recognition and celebration within our industry. It's a night dedicated to honoring excellence, innovation, and the outstanding achievements of individuals and organizations that have made significant contributions to our field. Held annually with great anticipation, this glamorous event brings together the best and brightest minds in the industry for a night of revelry, recognition, and inspiration. At the Industry Awards Gala, we roll out the red carpet to showcase the remarkable accomplishments that drive our industry forward. With elegance and sophistication, we create an atmosphere that befits the remarkable individuals and businesses we celebrate. Our gala is not just an awards ceremony; it's an experience that leaves a lasting impression on all attendees.",
+        "features": [
+            "Honoring Excellence: The gala is all about recognizing and celebrating excellence. Awards are presented in various categories, ranging from individual achievements to company-wide innovations.",
+            "Red Carpet Arrival: Attendees experience the glamour of Hollywood as they walk the red carpet and have their photos taken by professional photographers.",
+            "Gourmet Dining: Indulge in a sumptuous gourmet meal prepared by world-class chefs, served with exquisite wines and cocktails, making it a culinary delight.",
+            "Entertainment Extravaganza: Enjoy captivating live performances by renowned artists, musicians, and entertainers that elevate the evening's ambiance.",
+            "Memorable Experience: From stunning decorations to impeccable event planning, every detail is meticulously crafted to ensure that attendees have a truly unforgettable experience."
+        ]
+    }
+]
