@@ -1,7 +1,12 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthProviderContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const NavBar = () => {
+	const { user, logOut } = useContext(AuthProviderContext);
+	const navigate = useNavigate();
+
 	const navMenu = (
 		<>
 			<li>
@@ -16,14 +21,32 @@ const NavBar = () => {
 			<li>
 				<NavLink to="/contact">Contact Us</NavLink>
 			</li>
-			<li>
-				<NavLink to="/booked">Booked</NavLink>
-			</li>
+			{user && (
+				<li>
+					<NavLink to="/booked">Booked</NavLink>
+				</li>
+			)}
 		</>
 	);
 
-	const profile = !true
-		? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4n9vUNCLmnEJ5pKIl0VUwTPofdPGIXPf2pA"
+	const handleLogOut = () => {
+		logOut()
+			.then(() => {
+				navigate("/");
+				Swal.fire(
+					"Welcome!",
+					"Your account has been Sign Out successful!",
+					"success"
+				);
+			})
+			.catch((error) => {
+				console.log(error.message);
+			});
+	};
+
+	console.log(user);
+	const profile = user?.photoURL
+		? user?.photoURL
 		: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdjLlJS2C2KD-fRoOykz8e5luqOtFFpGo_QQ&usqp=CAU";
 
 	return (
@@ -61,12 +84,28 @@ const NavBar = () => {
 				<ul className="menu menu-horizontal px-1">{navMenu}</ul>
 			</div>
 			<div className="navbar-end">
-				<label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-					<div className="w-10 rounded-full">
-						<img src={profile} className="object-cover" />
-					</div>
-				</label>
-				<Link className="btn">Login</Link>
+				{user ? (
+					<>
+						{/* <p>{user && user.name}</p> */}
+						<label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+							<div className="w-10 rounded-full">
+								<img src={profile} className="object-cover" />
+							</div>
+						</label>
+						<button onClick={handleLogOut} className="btn">
+							Log Out
+						</button>
+					</>
+				) : (
+					<>
+						<Link to="/register" className="btn">
+							Create An Account
+						</Link>
+						<Link to="/login" className="btn">
+							Login
+						</Link>
+					</>
+				)}
 			</div>
 		</div>
 	);

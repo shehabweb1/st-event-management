@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import bannerImg from "../../assets/banner.jpg";
 import Banner from "../Banner/Banner";
 import { useLoaderData } from "react-router-dom";
@@ -16,6 +16,7 @@ import "swiper/css/pagination";
 
 const Home = () => {
 	const data = useLoaderData();
+
 	return (
 		<>
 			<Banner bannerImg={bannerImg} bannerTitle="Corporate Event Management" />

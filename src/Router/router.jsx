@@ -7,6 +7,9 @@ import Services from "../component/Service/Services";
 import ServiceDetails from "../component/Service/ServiceDetails";
 import Booked from "../component/Booked/Booked";
 import Contact from "../component/Contact/Contact";
+import Login from "../component/Login/Login";
+import Register from "../component/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
 	{
@@ -30,7 +33,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/services/:id",
-				element: <ServiceDetails />,
+				element: (
+					<PrivateRoute>
+						<ServiceDetails />
+					</PrivateRoute>
+				),
 				loader: () => fetch("../data.json"),
 			},
 			{
@@ -39,8 +46,20 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/booked",
-				element: <Booked />,
+				element: (
+					<PrivateRoute>
+						<Booked />
+					</PrivateRoute>
+				),
 				loader: () => fetch("../data.json"),
+			},
+			{
+				path: "/login",
+				element: <Login />,
+			},
+			{
+				path: "/register",
+				element: <Register />,
 			},
 		],
 	},
