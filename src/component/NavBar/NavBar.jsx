@@ -44,7 +44,6 @@ const NavBar = () => {
 			});
 	};
 
-	console.log(user);
 	const profile = user?.photoURL
 		? user?.photoURL
 		: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdjLlJS2C2KD-fRoOykz8e5luqOtFFpGo_QQ&usqp=CAU";
@@ -86,7 +85,7 @@ const NavBar = () => {
 			<div className="navbar-end">
 				{user ? (
 					<>
-						{/* <p>{user && user.name}</p> */}
+						<p>{user?.displayName && user.displayName}</p>
 						<label tabIndex={0} className="btn btn-ghost btn-circle avatar">
 							<div className="w-10 rounded-full">
 								<img src={profile} className="object-cover" />

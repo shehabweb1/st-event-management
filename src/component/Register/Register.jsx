@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { FaGoogle } from "react-icons/fa";
 
 const Register = () => {
 	const [password, setPassword] = useState("");
@@ -39,6 +40,7 @@ const Register = () => {
 		e.preventDefault();
 		const form = new FormData(e.currentTarget);
 		const name = form.get("name");
+		const photo = form.get("photo");
 		const email = form.get("email");
 		const password = form.get("password");
 		createUser(email, password)
@@ -175,13 +177,16 @@ const Register = () => {
 					</div>
 				</form>
 
-				<div className="my-5">
-					<button onClick={handleJoinWithGoogle} className="btn">
-						Google
+				{<p className="text-red-600 my-5">{showError}</p>}
+
+				<div className="my-10">
+					<button
+						onClick={handleJoinWithGoogle}
+						className=" flex items-center gap-3 py-2 px-5 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-600 hover:text-white"
+					>
+						<FaGoogle /> Google
 					</button>
 				</div>
-
-				{<p className="text-red-600 my-5">{showError}</p>}
 
 				<p className="mt-10 text-center text-sm text-gray-500">
 					If you have an account? Please{" "}
