@@ -1,13 +1,7 @@
-import React from 'react';
-import { auth } from './firebase/firebase.config';
+import React from "react";
 
 const App = () => {
-  console.log(auth)
-  return (
-    <div>
-      
-    </div>
-  );
+	return <div></div>;
 };
 
 export default App;
