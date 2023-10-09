@@ -67,7 +67,7 @@ const Register = () => {
 	return (
 		<div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
 			<h1 className="text-center text-3xl font-semibold mb-10">
-				Login your account
+				Create an Account
 			</h1>
 			<div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
 				<form className="space-y-6" onSubmit={handleCreateAccount}>
@@ -178,10 +178,11 @@ const Register = () => {
 
 				{<p className="text-red-600 my-5">{showError}</p>}
 
-				<div className="my-10">
+				<div className="my-10 flex gap-2 items-center">
+					<p className="text-lg">Login With Google Account</p>
 					<button
 						onClick={handleJoinWithGoogle}
-						className=" flex items-center gap-3 py-2 px-5 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-600 hover:text-white"
+						className="flex items-center gap-2 py-1 px-5 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-600 hover:text-white"
 					>
 						<FaGoogle /> Google
 					</button>

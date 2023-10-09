@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import bannerImg from "../../assets/banner.jpg";
 import Banner from "../Banner/Banner";
 import { useLoaderData } from "react-router-dom";
@@ -21,21 +21,19 @@ const Home = () => {
 		<>
 			<Banner bannerImg={bannerImg} bannerTitle="Corporate Event Management" />
 			<div className="my-20">
-				<h2 className="text-xl md:text-3xl font-semibold text-center pb-2">
-					Services
-				</h2>
+				<h2 className="text-3xl font-semibold text-center pb-2">Services</h2>
 				<hr className="border-t-2 w-32 mx-auto mb-8" />
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-					{data.map((service) => (
-						<ServiceCard data={service} key={service.id} />
+					{data.map((e) => (
+						<ServiceCard data={e} key={e.id} />
 					))}
 				</div>
 			</div>
 			<div className="my-20">
 				<div className="grid lg:grid-cols-2 gap-5" data-aos="fade-up">
 					<div>
-						<h2 className="text-xl md:text-2xl font-semibold text-center pb-2">
+						<h2 className="text-2xl font-semibold text-center pb-2">
 							Why Choose Us for your Event?
 						</h2>
 						<p className="text-center">Event that you will Remember</p>
@@ -68,7 +66,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="py-10 bg-gray-800">
-				<h2 className="text-3xl font-semibold text-center mb-8">
+				<h2 className="text-3xl font-semibold text-center text-white mb-8">
 					Our Recent Clients
 				</h2>
 				<Swiper

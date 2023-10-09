@@ -87,10 +87,11 @@ const Login = () => {
 					</div>
 				</form>
 
-				<div className="my-10">
+				<div className="my-10 flex gap-2 items-center">
+					<p >Login With Google Account</p>
 					<button
 						onClick={handleLoginWithGoogle}
-						className=" flex items-center gap-3 py-2 px-5 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-600 hover:text-white"
+						className=" flex items-center gap-2 py-1 px-5 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-600 hover:text-white"
 					>
 						<FaGoogle /> Google
 					</button>
