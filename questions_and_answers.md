@@ -15,12 +15,10 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer: </b></summary>
 <p>
 
-#### Answer: ?
-
-<i>Write your explanation here</i>
+#### Answer: C: undefined
 
 </p>
 </details>
@@ -29,7 +27,7 @@ console.log(greetign);
 
 ```javascript
 function sum(a, b) {
-  return a + b;
+	return a + b;
 }
 
 sum(1, "2");
@@ -43,9 +41,7 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
-
-<i>Write your explanation here</i>
+#### Answer: A: NaN.
 
 </p>
 </details>
@@ -69,9 +65,7 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
-
-<i>Write your explanation here</i>
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
 </p>
 </details>
@@ -80,7 +74,7 @@ console.log(food);
 
 ```javascript
 function sayHi(name) {
-  return `Hi there, ${name}`;
+	return `Hi there, ${name}`;
 }
 
 console.log(sayHi());
@@ -94,9 +88,7 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
-
-<i>Write your explanation here</i>
+#### Answer: B: `Hi there, undefined`
 
 </p>
 </details>
@@ -108,7 +100,7 @@ let count = 0;
 const nums = [0, 1, 2, 3];
 
 nums.forEach((num) => {
-  if (num) count += 1;
+	if (num) count += 1;
 });
 
 console.log(count);
@@ -122,9 +114,7 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
-
-<i>Write your explanation here</i>
+#### Answer: C: 3
 
 </p>
 </details>
