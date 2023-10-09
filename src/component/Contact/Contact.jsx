@@ -2,13 +2,24 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import contactImg from "../../assets/contact.png";
 import { BsFillSendFill } from "react-icons/bs";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+	const handleContactForm = (e) => {
+		e.preventDefault();
+		const form = new FormData(e.currentTarget);
+		const name = form.get("name");
+		Swal.fire(
+			`Thank You ${name}!`,
+			"Your message sending successful!",
+			"success"
+		);
+	};
 	return (
 		<div>
 			<Banner bannerImg={contactImg} bannerTitle="Contact Us" />
 			<div className="my-10">
-				<form className="lg:w-1/2 mx-auto">
+				<form className="lg:w-1/2 mx-auto" onSubmit={handleContactForm}>
 					<div>
 						<label
 							htmlFor="name"
@@ -63,7 +74,10 @@ const Contact = () => {
 							></textarea>
 						</div>
 					</div>
-					<button className="btn items-center bg-blue-700 hover:bg-blue-800 text-white font-semibold text-lg mt-2 ms-auto block">
+					<button
+						type="submit"
+						className="btn items-center bg-blue-700 hover:bg-blue-800 text-white font-semibold text-lg mt-2 ms-auto block"
+					>
 						<BsFillSendFill className="inline-block" /> Send
 					</button>
 				</form>

@@ -75,9 +75,12 @@ const NavBar = () => {
 						{navMenu}
 					</ul>
 				</div>
-				<a className="btn btn-ghost normal-case text-2xl text-blue-400">
+				<Link
+					to="/"
+					className="btn btn-ghost normal-case text-2xl text-blue-400"
+				>
 					<span className="text-blue-600 font-extrabold">ST.</span> Event
-				</a>
+				</Link>
 			</div>
 			<div className="navbar-center hidden lg:flex">
 				<ul className="menu menu-horizontal px-1">{navMenu}</ul>

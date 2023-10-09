@@ -40,14 +40,13 @@ const Register = () => {
 		e.preventDefault();
 		const form = new FormData(e.currentTarget);
 		const name = form.get("name");
-		const photo = form.get("photo");
 		const email = form.get("email");
 		const password = form.get("password");
 		createUser(email, password)
 			.then((result) => {
 				navigate("/");
 				Swal.fire(
-					"Thank You!",
+					`Thank You ${name}!`,
 					"Your account has been created successful!",
 					"success"
 				);
