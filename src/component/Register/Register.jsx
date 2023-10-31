@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
@@ -8,7 +8,8 @@ const Register = () => {
 	const [password, setPassword] = useState("");
 	const [showError, setShowError] = useState(null);
 	const [isFormValid, setIsFormValid] = useState(false);
-	const { createUser, loginWithGoogle } = useContext(AuthProviderContext);
+	const { createUser, loginWithGoogle, updateUser } =
+		useContext(AuthProviderContext);
 
 	const navigate = useNavigate();
 
@@ -40,16 +41,25 @@ const Register = () => {
 		e.preventDefault();
 		const form = new FormData(e.currentTarget);
 		const name = form.get("name");
+		const photo = form.get("photo");
 		const email = form.get("email");
 		const password = form.get("password");
 		createUser(email, password)
 			.then((result) => {
-				navigate("/");
-				Swal.fire(
-					`Thank You ${name}!`,
-					"Your account has been created successful!",
-					"success"
-				);
+				if (result) {
+					updateUser(name, photo)
+						.then(() => {
+							navigate("/");
+							Swal.fire(
+								`Thank You ${name}!`,
+								"Your account has been created successful!",
+								"success"
+							);
+						})
+						.catch((error) => {
+							console.log(error);
+						});
+				}
 			})
 			.catch((err) => {
 				Swal.fire({
@@ -61,7 +71,21 @@ const Register = () => {
 	};
 
 	const handleJoinWithGoogle = () => {
-		loginWithGoogle();
+		loginWithGoogle()
+			.then((result) => {
+				if (result) {
+					navigate("/");
+					Swal.fire(
+						"Thank You!",
+						"Your account has been created successful!",
+						"success"
+					);
+				}
+			})
+			.catch((error) => {
+				const errorMessage = error.message;
+				console.log(errorMessage);
+			});
 	};
 
 	return (

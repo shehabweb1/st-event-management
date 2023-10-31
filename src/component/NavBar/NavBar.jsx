@@ -44,10 +44,6 @@ const NavBar = () => {
 			});
 	};
 
-	const profile = user?.photoURL
-		? user?.photoURL
-		: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdjLlJS2C2KD-fRoOykz8e5luqOtFFpGo_QQ&usqp=CAU";
-
 	return (
 		<div className="navbar bg-base-100">
 			<div className="navbar-start">
@@ -88,10 +84,10 @@ const NavBar = () => {
 			<div className="navbar-end">
 				{user ? (
 					<>
-						<p>{user?.displayName && user.displayName}</p>
+						<p>{user?.displayName}</p>
 						<label tabIndex={0} className="btn btn-ghost btn-circle avatar">
 							<div className="w-10 rounded-full">
-								<img src={profile} className="object-cover" />
+								<img src={user?.photoURL} className="object-cover" />
 							</div>
 						</label>
 						<button onClick={handleLogOut} className="btn">
@@ -100,9 +96,11 @@ const NavBar = () => {
 					</>
 				) : (
 					<>
-						<Link to="/register" className="btn">
-							Create An Account
-						</Link>
+						<div className="hidden lg:block">
+							<Link to="/register" className="btn">
+								Create An Account
+							</Link>
+						</div>
 						<Link to="/login" className="btn">
 							Login
 						</Link>

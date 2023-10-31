@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import {
 	GoogleAuthProvider,
 	createUserWithEmailAndPassword,
@@ -6,9 +6,9 @@ import {
 	signInWithEmailAndPassword,
 	signInWithPopup,
 	signOut,
+	updateProfile,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
-import Swal from "sweetalert2";
 
 export const AuthProviderContext = createContext(null);
 
@@ -24,23 +24,19 @@ const AuthProvider = ({ children }) => {
 	};
 
 	const loginWithGoogle = () => {
-		signInWithPopup(auth, provider)
-			.then((result) => {
-				Swal.fire(
-					"Thank You!",
-					"Your account has been created successful!",
-					"success"
-				);
-			})
-			.catch((error) => {
-				const errorMessage = error.message;
-				console.log(errorMessage);
-			});
+		return signInWithPopup(auth, provider);
 	};
 
 	const loginUser = (email, password) => {
 		setLoading(true);
 		return signInWithEmailAndPassword(auth, email, password);
+	};
+
+	const updateUser = (name, photo) => {
+		return updateProfile(auth.currentUser, {
+			displayName: name,
+			photoURL: photo,
+		})			
 	};
 
 	const logOut = () => {
@@ -63,6 +59,7 @@ const AuthProvider = ({ children }) => {
 		createUser,
 		loginWithGoogle,
 		loginUser,
+		updateUser,
 		logOut,
 		loading,
 	};

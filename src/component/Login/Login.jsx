@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthProviderContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-	const { loginUser, loginWithGoogle } = useContext(AuthProviderContext);
+	const { loading, loginUser, loginWithGoogle } =
+		useContext(AuthProviderContext);
 
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -17,15 +18,31 @@ const Login = () => {
 		const password = form.get("password");
 		loginUser(email, password)
 			.then((result) => {
-				navigate(location?.state ? location.state : "/");
-				Swal.fire("Thank You!", "Account Login successful!", "success");
+				if (result) {
+					navigate(location?.state ? location.state : "/");
+					Swal.fire("Thank You!", "Account Login successful!", "success");
+				}
 			})
 			.catch((error) => {
 				Swal.fire(error.message);
 			});
 	};
 	const handleLoginWithGoogle = () => {
-		loginWithGoogle();
+		loginWithGoogle()
+			.then((result) => {
+				if (result) {
+					navigate(location?.state ? location.state : "/");
+					Swal.fire(
+						"Thank You!",
+						"Your account has been created successful!",
+						"success"
+					);
+				}
+			})
+			.catch((error) => {
+				const errorMessage = error.message;
+				console.log(errorMessage);
+			});
 	};
 
 	return (
@@ -88,7 +105,7 @@ const Login = () => {
 				</form>
 
 				<div className="my-10 flex gap-2 items-center">
-					<p >Login With Google Account</p>
+					<p>Login With Google Account</p>
 					<button
 						onClick={handleLoginWithGoogle}
 						className=" flex items-center gap-2 py-1 px-5 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-600 hover:text-white"
